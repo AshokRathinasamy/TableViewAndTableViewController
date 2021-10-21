@@ -16,22 +16,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" textLabel="Pk2-sP-qof" style="IBUITableViewCellStyleDefault" id="Ovg-gr-Gea">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="100" id="Ovg-gr-Gea" customClass="CountryTableViewCell" customModule="TableViewAndTableViewController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ovg-gr-Gea" id="9Wz-WE-Ujy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="India" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pk2-sP-qof">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ftk-lr-bao">
+                                            <rect key="frame" x="214" y="0.0" width="200" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="akv-ZW-POp"/>
+                                                <constraint firstAttribute="height" constant="100" id="jzb-gB-O70"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-6Q-IRD">
+                                            <rect key="frame" x="20" y="11" width="194" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvL-AP-bWR">
+                                            <rect key="frame" x="20" y="45" width="194" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FaR-6Q-IRD" firstAttribute="top" secondItem="9Wz-WE-Ujy" secondAttribute="topMargin" id="4BB-nf-ZSw"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ftk-lr-bao" secondAttribute="bottom" id="7v2-Sg-9UM"/>
+                                        <constraint firstItem="FaR-6Q-IRD" firstAttribute="leading" secondItem="9Wz-WE-Ujy" secondAttribute="leadingMargin" id="IHA-TL-Fxf"/>
+                                        <constraint firstItem="Ftk-lr-bao" firstAttribute="leading" secondItem="tvL-AP-bWR" secondAttribute="trailing" id="VOv-0k-v6m"/>
+                                        <constraint firstItem="tvL-AP-bWR" firstAttribute="leading" secondItem="9Wz-WE-Ujy" secondAttribute="leadingMargin" id="WwY-OF-jpW"/>
+                                        <constraint firstItem="tvL-AP-bWR" firstAttribute="top" secondItem="FaR-6Q-IRD" secondAttribute="bottom" constant="10" id="Zeb-cr-uqQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ftk-lr-bao" secondAttribute="trailing" id="kb3-jd-5oV"/>
+                                        <constraint firstItem="Ftk-lr-bao" firstAttribute="top" secondItem="9Wz-WE-Ujy" secondAttribute="top" id="oJM-w1-DMq"/>
+                                        <constraint firstItem="Ftk-lr-bao" firstAttribute="leading" secondItem="FaR-6Q-IRD" secondAttribute="trailing" id="whQ-Ae-xWP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryImageView" destination="Ftk-lr-bao" id="G4h-Qq-56B"/>
+                                    <outlet property="countryTextLabel" destination="tvL-AP-bWR" id="mT1-LQ-edZ"/>
+                                    <outlet property="countryTitleLabel" destination="FaR-6Q-IRD" id="AVz-Cd-e4e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -43,7 +71,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSx-8Z-Amd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="-1"/>
+            <point key="canvasLocation" x="-466.66666666666669" y="-1.3392857142857142"/>
         </scene>
     </scenes>
     <resources>
