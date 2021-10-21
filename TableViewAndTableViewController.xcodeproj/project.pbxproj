@@ -13,6 +13,7 @@
 		F90921DC27219E180032A294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90921DA27219E180032A294 /* Main.storyboard */; };
 		F90921DE27219E1B0032A294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90921DD27219E1B0032A294 /* Assets.xcassets */; };
 		F90921E127219E1B0032A294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90921DF27219E1B0032A294 /* LaunchScreen.storyboard */; };
+		F90921EB2721A8900032A294 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90921EA2721A8900032A294 /* CountriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F90921DD27219E1B0032A294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F90921E027219E1B0032A294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F90921E227219E1B0032A294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90921EA2721A8900032A294 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F90921D327219E180032A294 /* TableViewAndTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F90921EA2721A8900032A294 /* CountriesTableViewController.swift */,
 				F90921D427219E180032A294 /* AppDelegate.swift */,
 				F90921D627219E180032A294 /* SceneDelegate.swift */,
 				F90921D827219E180032A294 /* ViewController.swift */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90921EB2721A8900032A294 /* CountriesTableViewController.swift in Sources */,
 				F90921D927219E180032A294 /* ViewController.swift in Sources */,
 				F90921D527219E180032A294 /* AppDelegate.swift in Sources */,
 				F90921D727219E180032A294 /* SceneDelegate.swift in Sources */,
@@ -292,7 +296,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashok.TableViewAndTableViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashok.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,7 +314,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashok.TableViewAndTableViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashok.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
